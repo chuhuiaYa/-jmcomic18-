@@ -1,0 +1,102 @@
+﻿/* 全局样式 */
+body {
+    background-image: url('/Content/images/login背景.jpg'); /* 使用图片路径 */
+    background-size: contain; /* 背景图片自适应屏幕大小 */
+    background-position: center; /* 背景图片居中显示 */
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 设置页面高度为100%视窗高度 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 页面容器 */
+/* 样式调整 */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* 设置透明度背景 */
+    width: 50%;
+    margin: 0 auto; /* 中心对齐 */
+    padding: 100px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #6600CC;
+}
+
+/* 让标签和输入框在同一水平显示 */
+.form-group {
+    display: flex; /* 使用flex布局 */
+    justify-content: flex-start;
+    margin-left: -80px; /* 微调表单左侧位置 */
+    margin-top: 5px; /* 微调表单顶部位置 */
+    margin-bottom: 15px; /* 设置每个表单项之间的间距 */
+}
+
+    .form-group label {
+        min-width: 120px; /* 标签宽度 */
+        font-size: 20px; /* 标签字体大小 */
+        margin-right: 5px; /* 标签和输入框之间的间距 */
+        text-align: right; /* 标签右对齐 */
+        left: 2px; /* 向右微调标签位置 */
+        top: -20px; /* 向上微调标签位置 */
+    }
+
+.form-group .form-control {
+    flex: 1;                 /* 输入框占据剩余空间 */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 让按钮更大 */
+.button {
+    padding: 10px 20px; /* 增加上下和左右的内边距 */
+    font-size: 16px; /* 增加字体大小 */
+    cursor: pointer; /* 鼠标悬停时显示为手指形状 */
+    border: none; /* 去除边框 */
+    border-radius: 5px; /* 圆角 */
+    background-color: #6600CC; /* 按钮背景色 */
+    color: white; /* 按钮字体颜色 */
+}
+
+    /* 设置按钮的悬停效果 */
+    .button:hover {
+        background-color: #9933FF; /* 按钮悬停时背景色 */
+    }
+
+/* 让按钮在同一水平显示 */
+.button-container {
+    text-align: center; /* 使按钮居中 */
+}
+
+    .button-container button {
+        margin: 0 10px; /* 按钮之间的间距 */
+        display: inline-block; /* 使按钮横向排列 */
+    }
+
+
+/* 注册按钮样式 */
+.btn-register {
+    background-color: #f1f1f1;
+    color: #6600cc;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+    .btn-register:hover {
+        background-color: #ddd;
+    }
+
+/* 提示信息样式 */
+.label-info {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}

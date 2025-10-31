@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Master.cs" Inherits="禁漫天堂.MasterPages.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="PageTitle" runat="server" /></title>
+    <link href="/App_Themes/主题one/styles.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <!-- 顶部导航 -->
+            <div class="navbar">
+                <div class="navbar-logo">
+                    <a href="/Pages/首页.aspx"><img src="/Content/images/logo.png" alt="禁漫天堂" class="logo" /></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/Pages/首页.aspx">首页</a></li>
+                    <li><a href="漫画List.aspx?tag=韩漫">韩漫</a></li>
+                    <li><a href="漫画List.aspx?tag=全彩">全彩</a></li>
+                    <li><a href="漫画List.aspx?tag=中文">中文</a></li>
+                    <li class="icon"><a href="#"><img src="/Content/images/grid-icon.png" alt="更多" class="logo1" /></a></li>
+                </ul>
+                <div class="user-actions">
+                    <a href="#">VIP</a>
+                    <a href="#">历史</a>
+                    <a href="个人中心.aspx#favorites">收藏</a>
+                    <a href="个人中心.aspx"><img src="<%= AvatarUrl %>" alt="用户" class="user-avatar" /></a>
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search-bar">
+                 <input type="text" id="search-input" class="search-input" placeholder="搜索漫画..." />
+                 <button id="search-button" class="search-button" type="button" onclick="search()">搜索</button>
+
+            </div>
+            <div class="tag-container">
+            <a href="漫画List.aspx?tag=后宫" class="tag">后宫</a>
+            <a href="漫画List.aspx?tag=萝莉" class="tag">萝莉</a>
+            <a href="漫画List.aspx?tag=连载" class="tag">连载</a>
+            <a href="漫画List.aspx?tag=纯爱" class="tag">纯爱</a>
+            <a href="漫画List.aspx?tag=NTR" class="tag">NTR</a>
+
+        </div>
+        </header>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+    </form>
+    
+    <script src="/Scripts/search.js"></script> <!-- 确保路径正确 -->
+</body>
+</html>

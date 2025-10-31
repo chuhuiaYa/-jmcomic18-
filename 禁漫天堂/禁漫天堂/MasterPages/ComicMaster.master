@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ComicMaster.master.cs" Inherits="禁漫天堂.MasterPages.ComicMaster" %>
+
+<!DOCTYPE html>
+<html lang="zh">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="PageTitle" runat="server"></asp:ContentPlaceHolder></title>
+    <link href="/App_Themes/主题one/介绍styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="CustomCSS" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- 页头部分 -->
+         <!-- 顶部导航 -->
+             <div class="navbar">
+                 <div class="navbar-logo">
+                     <a href="/Pages/首页.aspx"><img src="/Content/images/logo.png" alt="禁漫天堂" class="logo" /></a>
+                 </div>
+                 <ul class="nav-links">
+                     <li><a href="/Pages/首页.aspx">首页</a></li>
+                     <li><a href="漫画List.aspx?tag=韩漫">韩漫</a></li>
+                     <li><a href="漫画List.aspx?tag=全彩">全彩</a></li>
+                     <li><a href="漫画List.aspx?tag=中文">中文</a></li>
+                     <li class="icon"><a href="#"><img src="/Content/images/grid-icon.png" alt="更多" class="logo1" /></a></li>
+                 </ul>
+                 <div class="user-actions">
+                     <a href="#">VIP</a>
+                     <a href="#">历史</a>
+                     <a href="#">收藏</a>
+                     <a href="个人中心.aspx"><img src="<%= AvatarUrl %>" alt="用户" class="user-avatar" /></a>
+                 </div>
+             </div>
+
+        <!-- 主体内容区域 -->
+        <div class="content">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+                <!-- 这里是动态内容区域，会由具体的页面来填充 -->
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- 页脚部分 -->
+        <div class="footer">
+            <p>&copy; 2024 禁漫天堂 | All Rights Reserved</p>
+        </div>
+    </form>
+</body>
+</html>
