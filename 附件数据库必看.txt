@@ -1,4 +1,4 @@
 icacls "E:\禁漫天堂.mdf" /grant "NT SERVICE\MSSQLSERVER":F
 icacls "E:\禁漫天堂_log.ldf" /grant "NT SERVICE\MSSQLSERVER":F
 //命令提示符运行，给文件授权给MSSQLSERVER
-老师可根据具体路径修改位置
+可根据具体路径修改位置
